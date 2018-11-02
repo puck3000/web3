@@ -1,0 +1,13 @@
+{
+  "name": "issue_traggr_3000",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Pascal Haupt, Daniel Lerch, Ioannis Vettas",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0"
+  }
+}

@@ -40,6 +40,6 @@ app.get('/projects', function (req, res) {
     });
 });
 
-app.listen(800, function () {
+app.listen(8000, function () {
     console.log("IssuTräggr3000 ready.");
 });

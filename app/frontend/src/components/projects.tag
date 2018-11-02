@@ -2,16 +2,10 @@
     <h2>Projects</h2>
     <h3>Select a Project:</h3>
     <ul>
-        <project each={ allProjects() } >
-            <a href="{ url }">
-                { title }, 
-                <span> { nrOfTodos } </span>
-            </a>
-        </project>
+        <project each={ allProjects() } ></project>
     </ul>
     <h3>Or create a new one:</h3>
-    <input type="text">
-    <button>add project</button>
+    <projectForm projects="{ this.projects }"></projectForm>
 
 
 <script>
@@ -20,6 +14,11 @@
     this.allProjects = function() {
         return this.projects.all();
     }
+    this.on('mount', function() {
+        console.log('fetching collection from projects');
+        this.projects.fetch();
+        this.update();
+    })
 </script>
 
 </projects>
