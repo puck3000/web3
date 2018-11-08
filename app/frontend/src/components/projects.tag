@@ -1,13 +1,14 @@
 <projects>
-    <h2>Projects</h2>
-    <h3>Select a Project:</h3>
+<section class="container">
+    <h2 class="subtitle">Projects</h2>
+    <h3>Select an existing project:</h3>
     <ul>
         <project each={ allProjects() } ></project>
     </ul>
     <h3>Or create a new one:</h3>
     <projectForm projects="{ this.projects }"></projectForm>
-
-
+</section>
+    
 <script>
     this.projects = new ProjectsCollection(this);
     // return all Projects:

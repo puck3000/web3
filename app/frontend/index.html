@@ -6,47 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Web3 | Milestone 2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- load material design lite stuff from https://getmdl.io -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!-- add blaze for riot gear to work properly -->
+    <!-- <link rel="stylesheet" href="assets/styles/blaze.min.css"> -->
+    <!-- add Bulma.io with font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
     <!-- load personal css styles -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assjets/styles/main.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assjets/styles/main.css" /> -->
 </head>
 
 <body>
-    <main>
-        <header-component></header-component>
-        <hr>
-        <article>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
-                quasi ea accusamus error dolorem et voluptate sequi dolore debitis
-                nesciunt, delectus exercitationem dicta soluta est cum eos aperiam
-                suscipit deserunt!</p>
-        </article>
-        <hr>
-        <projects></projects>
-        <!-- <hr>
-        <todos></todos> -->
-        <hr>
-        <footer>
-            <h2>footer</h2>
-            <a href="#">tests</a>
-        </footer>
-    </main>
+    <header-component class="section"></header-component>
+    <!-- <projects class="section"></projects> -->
+    <todos class="section"></todos>
+    <footer-component class="section"></footer-component>
+
 
     <!-- load models -->
     <script src="src/models/projects-collection.js"></script>
+    <script src="src/models/todos-collection.js"></script>
     <!-- load tags/commponents -->
     <script type="riot/tag" src="src/components/header-component.tag"></script>
+    <script type="riot/tag" src="src/components/footer-component.tag"></script>
     <script type="riot/tag" src="src/components/project.tag"></script>
     <script type="riot/tag" src="src/components/project-form.tag"></script>
     <script type="riot/tag" src="src/components/projects.tag"></script>
     <script type="riot/tag" src="src/components/todo.tag"></script>
     <script type="riot/tag" src="src/components/todos.tag"></script>
+    <script type="riot/tag" src="src/components/todo-form.tag"></script>
+    <script type="riot/tag" src="src/components/my-date.tag"></script>
+
+
     <!-- load riot -->
     <script src="assets/lib/riot+compiler.min.js"></script>
     <script src="assets/lib/jquery.min.js"></script>
+    <!-- <script src="assets/lib/blaze-atoms.js"></script> -->
+    <script src="assets/lib/rg.min.js"></script>
+    <script src="assets/lib/moment.min.js"></script>
+
     <!-- mount the components -->
     <script>
         riot.mount('*');

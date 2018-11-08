@@ -1,6 +1,6 @@
 <todos>
-
     <div class="container">
+    <h2 class="subtitle">Todos in project "{ project || 'Project Title' }"</h2>
         <todoForm todos="{ this.todos }"></todoForm>
         <ul>
             <todo each="{ allTodos() }"> </todo>

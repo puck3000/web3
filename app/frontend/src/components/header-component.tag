@@ -1,5 +1,6 @@
 <header-component>
-    <h1>IssuTräggr</h1>
+<header class="container"> 
+    <h1 class="title">IssuTräggr</h1>
     <nav>
         <ul>
             <li>
@@ -10,4 +11,5 @@
             </li>
         </ul>
     </nav>
+</header>
 </header-component>

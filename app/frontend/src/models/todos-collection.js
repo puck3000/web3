@@ -11,8 +11,6 @@ class TodoCollection {
             this.riotjs_tag = tag;
         }
 
-        // // Setup
-        // this.fetch();
     }
 
     all() {

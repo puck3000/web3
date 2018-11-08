@@ -1,9 +1,16 @@
 <projectForm>
-    <form id="projectForm">
-        Create new project: <input type="text" ref="title">
-        <button id="save_project" onclick="{submit}">Save</button>
-    </form>
+    <div class="field has-addons">
+        <div class="control">
+            <input class="input" ref="title" type="text" placeholder="add a new project">
+        </div>
+        <div class="control">
+            <a class="button is-info" onclick="{ submit }">
+            add project
+            </a>
+        </div>
+    </div>
 
+   
     <script>
      console.log(opts);
      var projects = opts.projects;
