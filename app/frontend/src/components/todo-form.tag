@@ -14,7 +14,7 @@
         </div>
 
         <div class="control">
-            <my-date ref="date"></my-date>
+            <my-date date="01-01-2008"></my-date>
         </div>
 
         <div class="control">
@@ -28,14 +28,16 @@
         console.log(opts);
         var todos = opts.todos;
         
+        
         this.submit = function (e) {
             e.preventDefault();
             if (this.refs.name.value) {
                 todos.add({
                     "name": this.refs.name.value,
                     "priority": this.refs.priority.value,
-                    "date": this.refs.date,
-                    "done": false
+                    "date": '01-01-2018',
+                    "done": false,
+                    
                 });
                 this.refs.name.value = '';
                 this.refs.priority.value = 2;

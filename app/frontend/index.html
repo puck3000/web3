@@ -11,7 +11,7 @@
     <!-- add Bulma.io with font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    
+
     <!-- load personal css styles -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assjets/styles/main.css" /> -->
 </head>
@@ -24,14 +24,14 @@
 
 
     <!-- load models -->
-    <script src="src/models/projects-collection.js"></script>
-    <script src="src/models/todos-collection.js"></script>
+    <!-- <script src="src/models/projects-collection.js"></script> -->
+    <script src="src/models/project.js"></script>
     <!-- load tags/commponents -->
     <script type="riot/tag" src="src/components/header-component.tag"></script>
     <script type="riot/tag" src="src/components/footer-component.tag"></script>
-    <script type="riot/tag" src="src/components/project.tag"></script>
+    <!-- <script type="riot/tag" src="src/components/project.tag"></script>
     <script type="riot/tag" src="src/components/project-form.tag"></script>
-    <script type="riot/tag" src="src/components/projects.tag"></script>
+    <script type="riot/tag" src="src/components/projects.tag"></script> -->
     <script type="riot/tag" src="src/components/todo.tag"></script>
     <script type="riot/tag" src="src/components/todos.tag"></script>
     <script type="riot/tag" src="src/components/todo-form.tag"></script>
@@ -41,13 +41,18 @@
     <!-- load riot -->
     <script src="assets/lib/riot+compiler.min.js"></script>
     <script src="assets/lib/jquery.min.js"></script>
-    <!-- <script src="assets/lib/blaze-atoms.js"></script> -->
     <script src="assets/lib/rg.min.js"></script>
     <script src="assets/lib/moment.min.js"></script>
 
     <!-- mount the components -->
     <script>
-        riot.mount('*');
+        var bus = riot.observable();
+        riot.mount('*', {
+            bus: bus
+        });
+        riot.mount('todo', {
+            bus: bus
+        });
     </script>
 
 
