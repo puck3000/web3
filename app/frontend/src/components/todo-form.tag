@@ -13,9 +13,9 @@
             </div>
         </div>
 
-        <div class="control">
+        <!--  <div class="control">
             <my-date date="01-01-2008"></my-date>
-        </div>
+        </div>  -->
 
         <div class="control">
             <a class="button is-info" onclick="{ submit }">
@@ -25,9 +25,7 @@
     </div>
 
     <script>
-        console.log(opts);
         var todos = opts.todos;
-        
         
         this.submit = function (e) {
             e.preventDefault();

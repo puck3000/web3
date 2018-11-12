@@ -18,7 +18,7 @@
 
 <body>
     <header-component class="section"></header-component>
-    <!-- <projects class="section"></projects> -->
+    <projects class="section"></projects>
     <todos class="section"></todos>
     <footer-component class="section"></footer-component>
 
@@ -26,12 +26,13 @@
     <!-- load models -->
     <!-- <script src="src/models/projects-collection.js"></script> -->
     <script src="src/models/project.js"></script>
+    <script src="src/models/projects.js"></script>
     <!-- load tags/commponents -->
     <script type="riot/tag" src="src/components/header-component.tag"></script>
     <script type="riot/tag" src="src/components/footer-component.tag"></script>
-    <!-- <script type="riot/tag" src="src/components/project.tag"></script>
+    <script type="riot/tag" src="src/components/project.tag"></script>
     <script type="riot/tag" src="src/components/project-form.tag"></script>
-    <script type="riot/tag" src="src/components/projects.tag"></script> -->
+    <script type="riot/tag" src="src/components/projects.tag"></script>
     <script type="riot/tag" src="src/components/todo.tag"></script>
     <script type="riot/tag" src="src/components/todos.tag"></script>
     <script type="riot/tag" src="src/components/todo-form.tag"></script>
@@ -44,13 +45,13 @@
     <script src="assets/lib/rg.min.js"></script>
     <script src="assets/lib/moment.min.js"></script>
 
+    <!-- load router -->
+    <!-- <script src="src/router.js"></script> -->
+
     <!-- mount the components -->
     <script>
         var bus = riot.observable();
         riot.mount('*', {
-            bus: bus
-        });
-        riot.mount('todo', {
             bus: bus
         });
     </script>

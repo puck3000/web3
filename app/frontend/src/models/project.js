@@ -27,7 +27,7 @@ class Project {
   }
 
   removeTodo(el) {
-    console.log(el);
+    console.log("removed todo: ", el.name);
     let index = this.project.indexOf(el);
     this.project.splice(index, 1);
     this.save();
@@ -40,8 +40,6 @@ class Project {
       return el.id == id;
     });
   }
-
-
 
   toggleDoneStatus(el) {
     let currentTodo = this.get(el.id);

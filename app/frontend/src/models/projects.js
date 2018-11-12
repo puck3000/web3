@@ -5,9 +5,7 @@ class Projects {
         this.projects = [];
         // configuration:
         this.localStorage_key = 'projects';
-        if (tag) {
-            this.riotjs_tag = tag;
-        }
+        this.bus = bus;
     }
 
     all() {
@@ -20,19 +18,19 @@ class Projects {
     }
 
     // adds a project to projects and persists it
-    add(model) {
-        add(model) {
-            model.id = this.uuid();
 
-            this.projects.push(model);
-            this.save();
-            this.bus.trigger("collectionUpdated");
-        }
+    add(model) {
+        model.id = this.uuid();
+
+        this.projects.push(model);
+        this.save();
+        this.bus.trigger("collectionUpdated");
     }
+
 
     // Fetch models from localStorage into collection
     fetch() {
-        this.project =
+        this.projects =
             JSON.parse(localStorage.getItem(this.localStorage_key)) || [];
         this.bus.trigger("collectionUpdated");
     }

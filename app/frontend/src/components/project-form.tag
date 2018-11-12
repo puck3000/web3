@@ -12,13 +12,13 @@
 
    
     <script>
-     console.log(opts);
      var projects = opts.projects;
 
      this.submit = function(e) {
          e.preventDefault();
          if (this.refs.title.value) {
-             projects.add({ "title" : this.refs.title.value });
+             projects.add({ "title" : this.refs.title.value,
+             "todos": [] });
              this.refs.title.value = '';
          }
      }
