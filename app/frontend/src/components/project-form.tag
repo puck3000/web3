@@ -17,8 +17,7 @@
      this.submit = function(e) {
          e.preventDefault();
          if (this.refs.title.value) {
-             projects.add({ "title" : this.refs.title.value,
-             "todos": [] });
+             projects.add({ "title" : this.refs.title.value });
              this.refs.title.value = '';
          }
      }

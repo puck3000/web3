@@ -1,7 +1,7 @@
 <todos>
     <div class="container">
     <h2 class="subtitle">Todos in project "{ project || 'Project Title' }"</h2>
-        <todoForm todos="{ this.todos }"></todoForm>
+        <todoForm todos="{ this.todos }" ></todoForm>
         <ul>
             <todo each="{ allTodos() }"></todo>
         </ul>
@@ -10,7 +10,7 @@
     <script>
         let  tag = this;
         this.bus = opts.bus;
-
+               
         this.todos = new Project(bus);
         // return all todos
         this.allTodos = function() {
@@ -21,11 +21,10 @@
             this.todos.fetch();
         })
 
-        this.bus.on('collectionUpdated', function() {
+        this.on('collectionUpdated', function() {
             tag.update();
         });
 
         
-
     </script>
 </todos>

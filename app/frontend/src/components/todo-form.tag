@@ -13,6 +13,7 @@
             </div>
         </div>
 
+        <!--  riotgear datepicker buggy as uck:  -->
         <!--  <div class="control">
             <my-date date="01-01-2008"></my-date>
         </div>  -->
@@ -27,6 +28,8 @@
     <script>
         var todos = opts.todos;
         
+        //var selectedProject = this.parent.parent.projects.selectedProjectId;
+        // console.log(this.parent.parent.projects.selectedProjectId);
         this.submit = function (e) {
             e.preventDefault();
             if (this.refs.name.value) {
@@ -35,7 +38,6 @@
                     "priority": this.refs.priority.value,
                     "date": '01-01-2018',
                     "done": false,
-                    
                 });
                 this.refs.name.value = '';
                 this.refs.priority.value = 2;

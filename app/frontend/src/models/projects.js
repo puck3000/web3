@@ -3,6 +3,7 @@ class Projects {
     constructor(bus) {
         // local state: 
         this.projects = [];
+        this.selectedProjectId = 0;
         // configuration:
         this.localStorage_key = 'projects';
         this.bus = bus;
@@ -20,7 +21,8 @@ class Projects {
     // adds a project to projects and persists it
 
     add(model) {
-        model.id = this.uuid();
+        model.projectId = this.uuid();
+        model.todos = [];
 
         this.projects.push(model);
         this.save();
@@ -35,10 +37,15 @@ class Projects {
         this.bus.trigger("collectionUpdated");
     }
 
-    get(id) {
-        return this.project.find(function (el) {
-            return el.id == id;
-        });
+    getCurrentProjectId() {
+        return this.selectedProjectId;
+    }
+
+    setCurrentProjectId(id){
+        this.selectedProjectId = id;
+        this.save();
+        this.bus.trigger("collectionUpdated");
+        console.log("selected Project Id: ", this.selectedProjectId);
     }
 
     uuid() {

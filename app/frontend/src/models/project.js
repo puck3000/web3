@@ -20,6 +20,7 @@ class Project {
   // Adds a todo to the project and persists it
   add(model) {
     model.id = this.uuid();
+    model.selectedProject = this.getSelectedProject();
 
     this.project.push(model);
     this.save();
@@ -32,13 +33,18 @@ class Project {
     this.project.splice(index, 1);
     this.save();
     this.bus.trigger("collectionUpdated");
-
   }
 
   get(id) {
     return this.project.find(function (el) {
       return el.id == id;
     });
+  }
+
+  getSelectedProject(){
+    
+    return 'shit';
+    
   }
 
   toggleDoneStatus(el) {

@@ -1,9 +1,17 @@
 <project>
     <li>
-        <a href="{ url }">
+        <a href="{ url }" onclick="{ setCurrentProject }">
             <h3>Project: { title }</h3>
             <span>{ nrOfTodos }</span>
-            <!-- <img src="https://picsum.photos/200/200/?random" alt="random img"> -->
         </a>
     </li>
+
+<script>
+    let tag = this;
+
+    this.setCurrentProject = function(e) {
+        e.preventDefault();
+        tag.parent.projects.setCurrentProjectId(e.item.projectId);
+    }
+</script>
 </project>
